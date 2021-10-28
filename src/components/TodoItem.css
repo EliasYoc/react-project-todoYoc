@@ -1,0 +1,74 @@
+.wrapper-todo {
+  transition: height 0.3s ease;
+  height: 70px;
+  margin-bottom: 3px;
+  animation: itemAnimated 0.3s ease;
+}
+.wrapper-todo.hide-top {
+  height: -0px;
+  margin-bottom: 0;
+}
+.item {
+  background: linear-gradient(
+    to right,
+    rgba(1, 79, 189, 0.678) 10%,
+    rgba(0, 37, 88, 0.781) 50%
+  );
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: transform 0.3s ease, background 0.3s ease;
+  width: 95%;
+}
+.item.done,
+.item.done button {
+  background-color: lightgray;
+  opacity: 0.5;
+}
+.item.done p {
+  text-decoration: line-through;
+}
+.item.hide {
+  transform: translateX(-110%);
+}
+
+@keyframes itemAnimated {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 70px;
+  }
+}
+.item__btns {
+  display: flex;
+  position: relative;
+  z-index: 5;
+}
+.item__btns button {
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  padding: 10px 0;
+  transition: transform 0.3s ease;
+  font-size: 1.3rem;
+}
+.item__btns button:active {
+  transform: scale(0.9);
+}
+.item__done {
+  margin-right: 10px;
+  background-color: #2ecc71;
+}
+.item__delete {
+  background: crimson;
+}

@@ -1,0 +1,23 @@
+.empty-list {
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.2s ease;
+  position: absolute;
+}
+.empty-list img {
+  width: 90%;
+}
+
+.empty-list.true {
+  opacity: 1;
+  visibility: visible;
+}
+.empty-list.false {
+  opacity: 0;
+  visibility: hidden;
+}
