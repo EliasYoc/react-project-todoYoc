@@ -21,7 +21,6 @@ const AddTodo = () => {
     dispatch(addNewTodo(newTodo));
     setInputForm("");
   };
-  console.log("renderizando inputform");
   return (
     <form onSubmit={handleSubmit} className="form">
       <input
