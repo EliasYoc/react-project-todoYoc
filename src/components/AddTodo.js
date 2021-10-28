@@ -12,7 +12,7 @@ const AddTodo = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (!inputForm) return;
+    if (!inputForm) return;
     const newTodo = {
       id: v4(),
       info: inputForm,
